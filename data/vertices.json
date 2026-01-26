@@ -1,0 +1,446 @@
+[
+  {
+    "name": "Entrada Norte",
+    "parent": "Edificio 1",
+    "type": "entrance",
+    "coordinates": [-102.2955691, 21.8062366]
+  },
+  {
+    "name": "Entrada Sur",
+    "parent": "Edificio 1",
+    "type": "entrance",
+    "coordinates": [-102.2955612, 21.8060448]
+  },
+  {
+    "name": "Entrada Oeste",
+    "parent": "Edificio 1",
+    "type": "entrance",
+    "coordinates": [-102.2958432, 21.8061481]
+  },
+  {
+    "name": "Entrada Principal",
+    "parent": "Edificio 2",
+    "type": "entrance",
+    "coordinates": [-102.2962192, 21.8058266]
+  },
+  {
+    "name": "Entrada Sur",
+    "parent": "Edificio 3",
+    "type": "entrance",
+    "coordinates": [-102.2954693, 21.8067124]
+  },
+  {
+    "name": "Entrada Suroeste",
+    "parent": "Edificio 3",
+    "type": "entrance",
+    "coordinates": [-102.2956702, 21.8067456]
+  },
+  {
+    "name": "Entrada Este",
+    "parent": "Edificio 3",
+    "type": "entrance",
+    "coordinates": [-102.2951203, 21.8067394]
+  },
+  {
+    "name": "Entrada Noreste",
+    "parent": "Edificio 4",
+    "type": "entrance",
+    "coordinates": [-102.2972988, 21.8057868]
+  },
+  {
+    "name": "Entrada Noroeste",
+    "parent": "Edificio 4",
+    "type": "entrance",
+    "coordinates": [-102.2977863, 21.8058089]
+  },
+  {
+    "name": "Entrada Sureste",
+    "parent": "Edificio 4",
+    "type": "entrance",
+    "coordinates": [-102.2973032, 21.8056689]
+  },
+  {
+    "name": "Entrada Suroeste",
+    "parent": "Edificio 4",
+    "type": "entrance",
+    "coordinates": [-102.297789, 21.8056571]
+  },
+  {
+    "name": "Entrada Noreste",
+    "parent": "Edificio 5",
+    "type": "entrance",
+    "coordinates": [-102.2959364, 21.8076068]
+  },
+  {
+    "name": "Entrada Noroeste",
+    "parent": "Edificio 5",
+    "type": "entrance",
+    "coordinates": [-102.2962395, 21.8076641]
+  },
+  {
+    "name": "Entrada Sur",
+    "parent": "Edificio 5",
+    "type": "entrance",
+    "coordinates": [-102.2961306, 21.8073511]
+  },
+  {
+    "name": "Entrada Norte",
+    "parent": "Edificio 6",
+    "type": "entrance",
+    "coordinates": [-102.2973431, 21.8065042]
+  },
+  {
+    "name": "Entrada Sureste",
+    "parent": "Edificio 6",
+    "type": "entrance",
+    "coordinates": [-102.2970931, 21.8062439]
+  },
+  {
+    "name": "Entrada Sur",
+    "parent": "Edificio 7",
+    "type": "entrance",
+    "coordinates": [-102.2954283, 21.8079145]
+  },
+  {
+    "name": "Entrada Este",
+    "parent": "Cafeteria",
+    "type": "entrance",
+    "coordinates": [-102.296397, 21.806442]
+  },
+  {
+    "name": "Entrada Oeste",
+    "parent": "Cafeteria",
+    "type": "entrance",
+    "coordinates": [-102.2965721, 21.8064731]
+  },
+  {
+    "name": "Entrada Sureste",
+    "parent": "Cancha Futbol 7",
+    "type": "entrance",
+    "coordinates": [-102.2950702, 21.8072701]
+  },
+  {
+    "name": "Entrada Sur",
+    "parent": "Canchas Futbol Soccer",
+    "type": "entrance",
+    "coordinates": [-102.2968487, 21.8070926]
+  },
+  {
+    "name": "Entrada Suroeste",
+    "parent": "Zona Deportiva",
+    "type": "entrance",
+    "coordinates": [-102.2949502, 21.8071492]
+  },
+  {
+    "name": "Suroeste",
+    "parent": "Estacionamiento",
+    "type": "entrance",
+    "coordinates": [-102.2950352, 21.8056082]
+  },
+  {
+    "name": "Este",
+    "parent": "Estacionamiento",
+    "type": "entrance",
+    "coordinates": [-102.2945719, 21.8059498]
+  },
+  {
+    "name": "Motocicletas",
+    "parent": "Estacionamiento",
+    "type": "entrance",
+    "coordinates": [-102.2944992, 21.8058005]
+  },
+  {
+    "name": "Peatonal",
+    "parent": "Acceso",
+    "type": "entrance",
+    "coordinates": [-102.2948958, 21.8054506]
+  },
+  {
+    "name": "Vehicular",
+    "parent": "Acceso",
+    "type": "entrance",
+    "coordinates": [-102.2947331, 21.8055774]
+  },
+  {
+    "name": "Parada de Camión",
+    "parent": "Acceso",
+    "type": "entrance",
+    "coordinates": [-102.2946526, 21.8053951]
+  },
+
+  {
+    "name": "I1",
+    "type": "intersection",
+    "coordinates": [-102.295566, 21.80615]
+  },
+  {
+    "name": "I2",
+    "type": "intersection",
+    "coordinates": [-102.2954544, 21.8068077]
+  },
+  {
+    "name": "I3",
+    "type": "intersection",
+    "coordinates": [-102.2972987, 21.805735]
+  },
+  {
+    "name": "I4",
+    "type": "intersection",
+    "coordinates": [-102.2974533, 21.8058017]
+  },
+  {
+    "name": "I5",
+    "type": "intersection",
+    "coordinates": [-102.2976424, 21.805803]
+  },
+  {
+    "name": "I6",
+    "type": "intersection",
+    "coordinates": [-102.2974547, 21.8056523]
+  },
+  {
+    "name": "I7",
+    "type": "intersection",
+    "coordinates": [-102.2976465, 21.8056536]
+  },
+  {
+    "name": "I8",
+    "type": "intersection",
+    "coordinates": [-102.2961113, 21.8074828]
+  },
+  {
+    "name": "I9",
+    "type": "intersection",
+    "coordinates": [-102.2969814, 21.8064461]
+  },
+  {
+    "name": "I10",
+    "type": "intersection",
+    "coordinates": [-102.2969451, 21.8062145]
+  },
+  {
+    "name": "I11",
+    "type": "intersection",
+    "coordinates": [-102.2966608, 21.8063714]
+  },
+  {
+    "name": "I12",
+    "type": "intersection",
+    "coordinates": [-102.2970662, 21.8057731]
+  },
+  {
+    "name": "I13",
+    "type": "intersection",
+    "coordinates": [-102.2967188, 21.8059001]
+  },
+  {
+    "name": "I14",
+    "type": "intersection",
+    "coordinates": [-102.2962154, 21.8059094]
+  },
+  {
+    "name": "I15",
+    "type": "intersection",
+    "coordinates": [-102.29608, 21.8065095]
+  },
+  {
+    "name": "I16",
+    "type": "intersection",
+    "coordinates": [-102.2962288, 21.8063477]
+  },
+  {
+    "name": "I17",
+    "type": "intersection",
+    "coordinates": [-102.2962141, 21.8064174]
+  },
+  {
+    "name": "I18",
+    "type": "intersection",
+    "coordinates": [-102.2962905, 21.8059094]
+  },
+  {
+    "name": "I19",
+    "type": "intersection",
+    "coordinates": [-102.296927, 21.8060197]
+  },
+  {
+    "name": "I20",
+    "type": "intersection",
+    "coordinates": [-102.2969284, 21.8062725]
+  },
+  {
+    "name": "I21",
+    "type": "intersection",
+    "coordinates": [-102.2964011, 21.806376]
+  },
+  {
+    "name": "I22",
+    "type": "intersection",
+    "coordinates": [-102.2958417, 21.8062529]
+  },
+  {
+    "name": "I23",
+    "type": "intersection",
+    "coordinates": [-102.2958488, 21.8060456]
+  },
+  {
+    "name": "I24",
+    "type": "intersection",
+    "coordinates": [-102.2951437, 21.8059193]
+  },
+  {
+    "name": "I25",
+    "type": "intersection",
+    "coordinates": [-102.2951143, 21.8064173]
+  },
+  {
+    "name": "I26",
+    "type": "intersection",
+    "coordinates": [-102.2959197, 21.8064049]
+  },
+  {
+    "name": "I27",
+    "type": "intersection",
+    "coordinates": [-102.295575, 21.8063202]
+  },
+  {
+    "name": "I28",
+    "type": "intersection",
+    "coordinates": [-102.2958084, 21.8063625]
+  },
+  {
+    "name": "I29",
+    "type": "intersection",
+    "coordinates": [-102.2952867, 21.8062529]
+  },
+  {
+    "name": "I30",
+    "type": "intersection",
+    "coordinates": [-102.2952988, 21.8063401]
+  },
+  {
+    "name": "I31",
+    "type": "intersection",
+    "coordinates": [-102.2951144, 21.8063048]
+  },
+  {
+    "name": "I32",
+    "type": "intersection",
+    "coordinates": [-102.2956991, 21.8072438]
+  },
+  {
+    "name": "I33",
+    "type": "intersection",
+    "coordinates": [-102.2959311, 21.8071206]
+  },
+  {
+    "name": "I34",
+    "type": "intersection",
+    "coordinates": [-102.2957259, 21.8069724]
+  },
+  {
+    "name": "I35",
+    "type": "intersection",
+    "coordinates": [-102.2950943, 21.8068578]
+  },
+  {
+    "name": "I36",
+    "type": "intersection",
+    "coordinates": [-102.295656, 21.8074617]
+  },
+  {
+    "name": "I37",
+    "type": "intersection",
+    "coordinates": [-102.2956386, 21.8075526]
+  },
+  {
+    "name": "I38",
+    "type": "intersection",
+    "coordinates": [-102.2957015, 21.8070961]
+  },
+  {
+    "name": "I39",
+    "type": "intersection",
+    "coordinates": [-102.294988, 21.806933]
+  },
+  {
+    "name": "I40",
+    "type": "intersection",
+    "coordinates": [-102.2950028, 21.8067188]
+  },
+  {
+    "name": "I41",
+    "type": "intersection",
+    "coordinates": [-102.2949665, 21.8067811]
+  },
+  {
+    "name": "I42",
+    "type": "intersection",
+    "coordinates": [-102.2951208, 21.8065495]
+  },
+  {
+    "name": "I43",
+    "type": "intersection",
+    "coordinates": [-102.2958225, 21.8067258]
+  },
+  {
+    "name": "I44",
+    "type": "intersection",
+    "coordinates": [-102.2960692, 21.806671]
+  },
+  {
+    "name": "I45",
+    "type": "intersection",
+    "coordinates": [-102.2961564, 21.8065938]
+  },
+  {
+    "name": "I46",
+    "type": "intersection",
+    "coordinates": [-102.2959874, 21.8065888]
+  },
+  {
+    "name": "I47",
+    "type": "intersection",
+    "coordinates": [-102.2958332, 21.806432]
+  },
+  {
+    "name": "I48",
+    "type": "intersection",
+    "coordinates": [-102.2957232, 21.8067034]
+  },
+  {
+    "name": "I49",
+    "type": "intersection",
+    "coordinates": [-102.2957715, 21.8066623]
+  },
+  {
+    "name": "I50",
+    "type": "intersection",
+    "coordinates": [-102.2958346, 21.806859]
+  },
+  {
+    "name": "I51",
+    "type": "intersection",
+    "coordinates": [-102.2965866, 21.8067146]
+  },
+  {
+    "name": "I52",
+    "type": "intersection",
+    "coordinates": [-102.2966322, 21.8064805]
+  },
+  {
+    "name": "I53",
+    "type": "intersection",
+    "coordinates": [-102.2949724, 21.8056527]
+  },
+  {
+    "name": "I54",
+    "type": "intersection",
+    "coordinates": [-102.2947873, 21.8057187]
+  },
+  {
+    "name": "I55",
+    "type": "intersection",
+    "coordinates": [-102.2946894, 21.8057174]
+  }
+]
