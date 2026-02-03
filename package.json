@@ -1,13 +1,19 @@
 {
   "name": "automatas",
   "module": "src/main.ts",
-  "type": "module",
-  "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
+  "private": true,
   "scripts": {
     "start": "bun src/main.ts",
-    "dev": "bun --watch src/main.ts"
+    "dev": "bun --watch src/main.ts",
+    "transform": "bun scripts/transformGeojsonToJson.ts",
+    "makeCSV": "bun scripts/makeMatrices.ts",
+    "build": "bun transform && bun makeCSV"
+  },
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^13.2.2"
   }
 }

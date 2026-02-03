@@ -1,528 +1,389 @@
 [
   {
-    "parent": "Edificio 1",
-    "type": "entrance",
-    "label": "Entrada Norte",
+    "id": 0,
     "name": "V1",
-    "coordinates": { "lat": 21.8062366, "lon": -102.2955691 }
+    "label": "Edificio 1 - Acceso Norte",
+    "coordinates": {
+      "lat": 21.8062366,
+      "lon": -102.2955691
+    }
   },
   {
-    "parent": "Edificio 1",
-    "type": "entrance",
-    "label": "Entrada Sur",
+    "id": 1,
     "name": "V2",
-    "coordinates": { "lat": 21.8060448, "lon": -102.2955612 }
+    "label": "Edificio 1 - Acceso Sur",
+    "coordinates": {
+      "lat": 21.8060448,
+      "lon": -102.2955612
+    }
   },
   {
-    "parent": "Edificio 1",
-    "type": "entrance",
-    "label": "Entrada Oeste",
+    "id": 2,
     "name": "V3",
-    "coordinates": { "lat": 21.8061481, "lon": -102.2958432 }
+    "label": "Edificio 1 - Acceso Oeste",
+    "coordinates": {
+      "lat": 21.8061481,
+      "lon": -102.2958432
+    }
   },
   {
-    "parent": "Edificio 2",
-    "type": "entrance",
-    "label": "Entrada Principal",
+    "id": 3,
     "name": "V4",
-    "coordinates": { "lat": 21.8058266, "lon": -102.2962192 }
+    "label": "Edificio 2 - Acceso Principal",
+    "coordinates": {
+      "lat": 21.8058266,
+      "lon": -102.2962192
+    }
   },
   {
-    "parent": "Edificio 3",
-    "type": "entrance",
-    "label": "Entrada Sur",
+    "id": 4,
     "name": "V5",
-    "coordinates": { "lat": 21.8067124, "lon": -102.2954693 }
+    "label": "Edificio 3 - Acceso Sur",
+    "coordinates": {
+      "lat": 21.8067124,
+      "lon": -102.2954693
+    }
   },
   {
-    "parent": "Edificio 3",
-    "type": "entrance",
-    "label": "Entrada Suroeste",
+    "id": 5,
     "name": "V6",
-    "coordinates": { "lat": 21.8067456, "lon": -102.2956702 }
+    "label": "Edificio 3 - Acceso Suroeste",
+    "coordinates": {
+      "lat": 21.8067456,
+      "lon": -102.2956702
+    }
   },
   {
-    "parent": "Edificio 3",
-    "type": "entrance",
-    "label": "Entrada Este",
+    "id": 6,
     "name": "V7",
-    "coordinates": { "lat": 21.8067394, "lon": -102.2951203 }
+    "label": "Edificio 3 - Acceso Este",
+    "coordinates": {
+      "lat": 21.8067394,
+      "lon": -102.2951203
+    }
   },
   {
-    "parent": "Edificio 4",
-    "type": "entrance",
-    "label": "Entrada Noreste",
+    "id": 7,
     "name": "V8",
-    "coordinates": { "lat": 21.8057868, "lon": -102.2972988 }
+    "label": "Edificio 4 - Acceso Noreste",
+    "coordinates": {
+      "lat": 21.8057868,
+      "lon": -102.2972988
+    }
   },
   {
-    "parent": "Edificio 4",
-    "type": "entrance",
-    "label": "Entrada Noroeste",
+    "id": 8,
     "name": "V9",
-    "coordinates": { "lat": 21.8058089, "lon": -102.2977863 }
+    "label": "Edificio 4 - Acceso Noroeste",
+    "coordinates": {
+      "lat": 21.8058089,
+      "lon": -102.2977863
+    }
   },
   {
-    "parent": "Edificio 4",
-    "type": "entrance",
-    "label": "Entrada Sureste",
+    "id": 9,
     "name": "V10",
-    "coordinates": { "lat": 21.8056689, "lon": -102.2973032 }
+    "label": "Edificio 4 - Acceso Sureste",
+    "coordinates": {
+      "lat": 21.8056689,
+      "lon": -102.2973032
+    }
   },
   {
-    "parent": "Edificio 4",
-    "type": "entrance",
-    "label": "Entrada Suroeste",
+    "id": 10,
     "name": "V11",
-    "coordinates": { "lat": 21.8056571, "lon": -102.297789 }
+    "label": "Edificio 4 - Acceso Suroeste",
+    "coordinates": {
+      "lat": 21.8056571,
+      "lon": -102.297789
+    }
   },
   {
-    "parent": "Edificio 5",
-    "type": "entrance",
-    "label": "Entrada Noreste",
+    "id": 11,
     "name": "V12",
-    "coordinates": { "lat": 21.8076068, "lon": -102.2959364 }
+    "label": "Edificio 5 - Acceso Noreste",
+    "coordinates": {
+      "lat": 21.8076068,
+      "lon": -102.2959364
+    }
   },
   {
-    "parent": "Edificio 5",
-    "type": "entrance",
-    "label": "Entrada Noroeste",
+    "id": 12,
     "name": "V13",
-    "coordinates": { "lat": 21.8076641, "lon": -102.2962395 }
+    "label": "Edificio 5 - Acceso Noroeste",
+    "coordinates": {
+      "lat": 21.8076641,
+      "lon": -102.2962395
+    }
   },
   {
-    "parent": "Edificio 5",
-    "type": "entrance",
-    "label": "Entrada Sur",
+    "id": 13,
     "name": "V14",
-    "coordinates": { "lat": 21.8073511, "lon": -102.2961306 }
+    "label": "Edificio 5 - Acceso Sur",
+    "coordinates": {
+      "lat": 21.8073511,
+      "lon": -102.2961306
+    }
   },
   {
-    "parent": "Edificio 6",
-    "type": "entrance",
-    "label": "Entrada Norte",
+    "id": 14,
     "name": "V15",
-    "coordinates": { "lat": 21.8065042, "lon": -102.2973431 }
+    "label": "Edificio 6 - Acceso Norte",
+    "coordinates": {
+      "lat": 21.8065042,
+      "lon": -102.2973431
+    }
   },
   {
-    "parent": "Edificio 6",
-    "type": "entrance",
-    "label": "Entrada Sureste",
+    "id": 15,
     "name": "V16",
-    "coordinates": { "lat": 21.8062439, "lon": -102.2970931 }
+    "label": "Edificio 6 - Acceso Sureste",
+    "coordinates": {
+      "lat": 21.8062439,
+      "lon": -102.2970931
+    }
   },
   {
-    "parent": "Edificio 7",
-    "type": "entrance",
-    "label": "Entrada Sur",
+    "id": 16,
     "name": "V17",
-    "coordinates": { "lat": 21.8079145, "lon": -102.2954283 }
+    "label": "Edificio 7 - Acceso Principal",
+    "coordinates": {
+      "lat": 21.8079145,
+      "lon": -102.2954283
+    }
   },
   {
-    "parent": "Cafeteria",
-    "type": "entrance",
-    "label": "Entrada Este",
+    "id": 17,
     "name": "V18",
-    "coordinates": { "lat": 21.806442, "lon": -102.296397 }
+    "label": "Cafeteria - Acceso Este",
+    "coordinates": {
+      "lat": 21.806442,
+      "lon": -102.296397
+    }
   },
   {
-    "parent": "Cafeteria",
-    "type": "entrance",
-    "label": "Entrada Oeste",
+    "id": 18,
     "name": "V19",
-    "coordinates": { "lat": 21.8064731, "lon": -102.2965721 }
+    "label": "Cafeteria - Acceso Oeste",
+    "coordinates": {
+      "lat": 21.8064731,
+      "lon": -102.2965721
+    }
   },
   {
-    "parent": "Cancha Futbol 7",
-    "type": "entrance",
-    "label": "Entrada Sureste",
+    "id": 19,
     "name": "V20",
-    "coordinates": { "lat": 21.8072701, "lon": -102.2950702 }
+    "label": "Cancha Futbol 7 - Acceso Sureste",
+    "coordinates": {
+      "lat": 21.8072701,
+      "lon": -102.2950702
+    }
   },
   {
-    "parent": "Canchas Futbol Soccer",
-    "type": "entrance",
-    "label": "Entrada Sur",
+    "id": 20,
     "name": "V21",
-    "coordinates": { "lat": 21.8070926, "lon": -102.2968487 }
+    "label": "Canchas Futbol Soccer - Acceso Sur",
+    "coordinates": {
+      "lat": 21.8070926,
+      "lon": -102.2968487
+    }
   },
   {
-    "parent": "Zona Deportiva",
-    "type": "entrance",
-    "label": "Entrada Suroeste",
+    "id": 21,
     "name": "V22",
-    "coordinates": { "lat": 21.8071492, "lon": -102.2949502 }
+    "label": "Zona Deportiva - Acceso Suroeste",
+    "coordinates": {
+      "lat": 21.8071492,
+      "lon": -102.2949502
+    }
   },
   {
-    "parent": "Estacionamiento",
-    "type": "entrance",
-    "label": "Suroeste",
+    "id": 22,
     "name": "V23",
-    "coordinates": { "lat": 21.8056082, "lon": -102.2950352 }
+    "label": "Acceso Principal",
+    "coordinates": {
+      "lat": 21.8054506,
+      "lon": -102.2948958
+    }
   },
   {
-    "parent": "Estacionamiento",
-    "type": "entrance",
-    "label": "Este",
+    "id": 23,
     "name": "V24",
-    "coordinates": { "lat": 21.8059498, "lon": -102.2945719 }
-  },
-  {
-    "parent": "Estacionamiento",
-    "type": "entrance",
-    "label": "Motocicletas",
-    "name": "V25",
-    "coordinates": { "lat": 21.8058005, "lon": -102.2944992 }
-  },
-  {
-    "parent": "Acceso",
-    "type": "entrance",
-    "label": "Peatonal",
-    "name": "V26",
-    "coordinates": { "lat": 21.8054506, "lon": -102.2948958 }
-  },
-  {
-    "parent": "Acceso",
-    "type": "entrance",
-    "label": "Vehicular",
-    "name": "V27",
-    "coordinates": { "lat": 21.8055774, "lon": -102.2947331 }
-  },
-  {
-    "parent": "Acceso",
-    "type": "entrance",
     "label": "Parada de Camión",
+    "coordinates": {
+      "lat": 21.8053951,
+      "lon": -102.2946526
+    }
+  },
+  {
+    "id": 24,
+    "name": "V25",
+    "label": "Edificio 8",
+    "coordinates": {
+      "lat": 21.8053134,
+      "lon": -102.2940212
+    }
+  },
+  {
+    "id": 25,
+    "name": "V26",
+    "label": "Hangar",
+    "coordinates": {
+      "lat": 21.8052272,
+      "lon": -102.2974897
+    }
+  },
+  {
+    "id": 26,
+    "name": "V27",
+    "label": "CUSA",
+    "coordinates": {
+      "lat": 21.8060221,
+      "lon": -102.2973318
+    }
+  },
+  {
+    "id": 27,
     "name": "V28",
-    "coordinates": { "lat": 21.8053951, "lon": -102.2946526 }
-  },
-  {
-    "type": "intersection",
     "label": "I1",
+    "coordinates": {
+      "lat": 21.8065937,
+      "lon": -102.296078
+    }
+  },
+  {
+    "id": 28,
     "name": "V29",
-    "coordinates": { "lat": 21.80615, "lon": -102.295566 }
-  },
-  {
-    "type": "intersection",
     "label": "I2",
+    "coordinates": {
+      "lat": 21.8059135,
+      "lon": -102.2969224
+    }
+  },
+  {
+    "id": 29,
     "name": "V30",
-    "coordinates": { "lat": 21.8068077, "lon": -102.2954544 }
-  },
-  {
-    "type": "intersection",
     "label": "I3",
+    "coordinates": {
+      "lat": 21.8063477,
+      "lon": -102.2962288
+    }
+  },
+  {
+    "id": 30,
     "name": "V31",
-    "coordinates": { "lat": 21.805735, "lon": -102.2972987 }
-  },
-  {
-    "type": "intersection",
     "label": "I4",
+    "coordinates": {
+      "lat": 21.8058017,
+      "lon": -102.2974533
+    }
+  },
+  {
+    "id": 31,
     "name": "V32",
-    "coordinates": { "lat": 21.8058017, "lon": -102.2974533 }
-  },
-  {
-    "type": "intersection",
     "label": "I5",
+    "coordinates": {
+      "lat": 21.805803,
+      "lon": -102.2976424
+    }
+  },
+  {
+    "id": 32,
     "name": "V33",
-    "coordinates": { "lat": 21.805803, "lon": -102.2976424 }
-  },
-  {
-    "type": "intersection",
     "label": "I6",
+    "coordinates": {
+      "lat": 21.8056523,
+      "lon": -102.2974547
+    }
+  },
+  {
+    "id": 33,
     "name": "V34",
-    "coordinates": { "lat": 21.8056523, "lon": -102.2974547 }
-  },
-  {
-    "type": "intersection",
     "label": "I7",
+    "coordinates": {
+      "lat": 21.8056536,
+      "lon": -102.2976465
+    }
+  },
+  {
+    "id": 34,
     "name": "V35",
-    "coordinates": { "lat": 21.8056536, "lon": -102.2976465 }
-  },
-  {
-    "type": "intersection",
     "label": "I8",
+    "coordinates": {
+      "lat": 21.8059193,
+      "lon": -102.2951437
+    }
+  },
+  {
+    "id": 35,
     "name": "V36",
-    "coordinates": { "lat": 21.8074828, "lon": -102.2961113 }
-  },
-  {
-    "type": "intersection",
     "label": "I9",
+    "coordinates": {
+      "lat": 21.8072438,
+      "lon": -102.2956991
+    }
+  },
+  {
+    "id": 36,
     "name": "V37",
-    "coordinates": { "lat": 21.8064461, "lon": -102.2969814 }
-  },
-  {
-    "type": "intersection",
     "label": "I10",
+    "coordinates": {
+      "lat": 21.8071206,
+      "lon": -102.2959311
+    }
+  },
+  {
+    "id": 37,
     "name": "V38",
-    "coordinates": { "lat": 21.8062145, "lon": -102.2969451 }
-  },
-  {
-    "type": "intersection",
     "label": "I11",
+    "coordinates": {
+      "lat": 21.806933,
+      "lon": -102.294988
+    }
+  },
+  {
+    "id": 38,
     "name": "V39",
-    "coordinates": { "lat": 21.8063714, "lon": -102.2966608 }
-  },
-  {
-    "type": "intersection",
     "label": "I12",
+    "coordinates": {
+      "lat": 21.8066623,
+      "lon": -102.2957715
+    }
+  },
+  {
+    "id": 39,
     "name": "V40",
-    "coordinates": { "lat": 21.8057731, "lon": -102.2970662 }
-  },
-  {
-    "type": "intersection",
     "label": "I13",
+    "coordinates": {
+      "lat": 21.8063942,
+      "lon": -102.2958406
+    }
+  },
+  {
+    "id": 40,
     "name": "V41",
-    "coordinates": { "lat": 21.8059001, "lon": -102.2967188 }
-  },
-  {
-    "type": "intersection",
     "label": "I14",
+    "coordinates": {
+      "lat": 21.8063792,
+      "lon": -102.2953014
+    }
+  },
+  {
+    "id": 41,
     "name": "V42",
-    "coordinates": { "lat": 21.8059094, "lon": -102.2962154 }
-  },
-  {
-    "type": "intersection",
     "label": "I15",
+    "coordinates": {
+      "lat": 21.8066261,
+      "lon": -102.2953274
+    }
+  },
+  {
+    "id": 42,
     "name": "V43",
-    "coordinates": { "lat": 21.8065095, "lon": -102.29608 }
-  },
-  {
-    "type": "intersection",
     "label": "I16",
-    "name": "V44",
-    "coordinates": { "lat": 21.8063477, "lon": -102.2962288 }
-  },
-  {
-    "type": "intersection",
-    "label": "I17",
-    "name": "V45",
-    "coordinates": { "lat": 21.8064174, "lon": -102.2962141 }
-  },
-  {
-    "type": "intersection",
-    "label": "I18",
-    "name": "V46",
-    "coordinates": { "lat": 21.8059094, "lon": -102.2962905 }
-  },
-  {
-    "type": "intersection",
-    "label": "I19",
-    "name": "V47",
-    "coordinates": { "lat": 21.8060197, "lon": -102.296927 }
-  },
-  {
-    "type": "intersection",
-    "label": "I20",
-    "name": "V48",
-    "coordinates": { "lat": 21.8062725, "lon": -102.2969284 }
-  },
-  {
-    "type": "intersection",
-    "label": "I21",
-    "name": "V49",
-    "coordinates": { "lat": 21.806376, "lon": -102.2964011 }
-  },
-  {
-    "type": "intersection",
-    "label": "I22",
-    "name": "V50",
-    "coordinates": { "lat": 21.8062529, "lon": -102.2958417 }
-  },
-  {
-    "type": "intersection",
-    "label": "I23",
-    "name": "V51",
-    "coordinates": { "lat": 21.8060456, "lon": -102.2958488 }
-  },
-  {
-    "type": "intersection",
-    "label": "I24",
-    "name": "V52",
-    "coordinates": { "lat": 21.8059193, "lon": -102.2951437 }
-  },
-  {
-    "type": "intersection",
-    "label": "I25",
-    "name": "V53",
-    "coordinates": { "lat": 21.8064173, "lon": -102.2951143 }
-  },
-  {
-    "type": "intersection",
-    "label": "I26",
-    "name": "V54",
-    "coordinates": { "lat": 21.8064049, "lon": -102.2959197 }
-  },
-  {
-    "type": "intersection",
-    "label": "I27",
-    "name": "V55",
-    "coordinates": { "lat": 21.8063202, "lon": -102.295575 }
-  },
-  {
-    "type": "intersection",
-    "label": "I28",
-    "name": "V56",
-    "coordinates": { "lat": 21.8063625, "lon": -102.2958084 }
-  },
-  {
-    "type": "intersection",
-    "label": "I29",
-    "name": "V57",
-    "coordinates": { "lat": 21.8062529, "lon": -102.2952867 }
-  },
-  {
-    "type": "intersection",
-    "label": "I30",
-    "name": "V58",
-    "coordinates": { "lat": 21.8063401, "lon": -102.2952988 }
-  },
-  {
-    "type": "intersection",
-    "label": "I31",
-    "name": "V59",
-    "coordinates": { "lat": 21.8063048, "lon": -102.2951144 }
-  },
-  {
-    "type": "intersection",
-    "label": "I32",
-    "name": "V60",
-    "coordinates": { "lat": 21.8072438, "lon": -102.2956991 }
-  },
-  {
-    "type": "intersection",
-    "label": "I33",
-    "name": "V61",
-    "coordinates": { "lat": 21.8071206, "lon": -102.2959311 }
-  },
-  {
-    "type": "intersection",
-    "label": "I34",
-    "name": "V62",
-    "coordinates": { "lat": 21.8069724, "lon": -102.2957259 }
-  },
-  {
-    "type": "intersection",
-    "label": "I35",
-    "name": "V63",
-    "coordinates": { "lat": 21.8068578, "lon": -102.2950943 }
-  },
-  {
-    "type": "intersection",
-    "label": "I36",
-    "name": "V64",
-    "coordinates": { "lat": 21.8074617, "lon": -102.295656 }
-  },
-  {
-    "type": "intersection",
-    "label": "I37",
-    "name": "V65",
-    "coordinates": { "lat": 21.8075526, "lon": -102.2956386 }
-  },
-  {
-    "type": "intersection",
-    "label": "I38",
-    "name": "V66",
-    "coordinates": { "lat": 21.8070961, "lon": -102.2957015 }
-  },
-  {
-    "type": "intersection",
-    "label": "I39",
-    "name": "V67",
-    "coordinates": { "lat": 21.806933, "lon": -102.294988 }
-  },
-  {
-    "type": "intersection",
-    "label": "I40",
-    "name": "V68",
-    "coordinates": { "lat": 21.8067188, "lon": -102.2950028 }
-  },
-  {
-    "type": "intersection",
-    "label": "I41",
-    "name": "V69",
-    "coordinates": { "lat": 21.8067811, "lon": -102.2949665 }
-  },
-  {
-    "type": "intersection",
-    "label": "I42",
-    "name": "V70",
-    "coordinates": { "lat": 21.8065495, "lon": -102.2951208 }
-  },
-  {
-    "type": "intersection",
-    "label": "I43",
-    "name": "V71",
-    "coordinates": { "lat": 21.8067258, "lon": -102.2958225 }
-  },
-  {
-    "type": "intersection",
-    "label": "I44",
-    "name": "V72",
-    "coordinates": { "lat": 21.806671, "lon": -102.2960692 }
-  },
-  {
-    "type": "intersection",
-    "label": "I45",
-    "name": "V73",
-    "coordinates": { "lat": 21.8065938, "lon": -102.2961564 }
-  },
-  {
-    "type": "intersection",
-    "label": "I46",
-    "name": "V74",
-    "coordinates": { "lat": 21.8065888, "lon": -102.2959874 }
-  },
-  {
-    "type": "intersection",
-    "label": "I47",
-    "name": "V75",
-    "coordinates": { "lat": 21.806432, "lon": -102.2958332 }
-  },
-  {
-    "type": "intersection",
-    "label": "I48",
-    "name": "V76",
-    "coordinates": { "lat": 21.8067034, "lon": -102.2957232 }
-  },
-  {
-    "type": "intersection",
-    "label": "I49",
-    "name": "V77",
-    "coordinates": { "lat": 21.8066623, "lon": -102.2957715 }
-  },
-  {
-    "type": "intersection",
-    "label": "I50",
-    "name": "V78",
-    "coordinates": { "lat": 21.806859, "lon": -102.2958346 }
-  },
-  {
-    "type": "intersection",
-    "label": "I51",
-    "name": "V79",
-    "coordinates": { "lat": 21.8067146, "lon": -102.2965866 }
-  },
-  {
-    "type": "intersection",
-    "label": "I52",
-    "name": "V80",
-    "coordinates": { "lat": 21.8064805, "lon": -102.2966322 }
-  },
-  {
-    "type": "intersection",
-    "label": "I53",
-    "name": "V81",
-    "coordinates": { "lat": 21.8056527, "lon": -102.2949724 }
-  },
-  {
-    "type": "intersection",
-    "label": "I54",
-    "name": "V82",
-    "coordinates": { "lat": 21.8057187, "lon": -102.2947873 }
-  },
-  {
-    "type": "intersection",
-    "label": "I55",
-    "name": "V83",
-    "coordinates": { "lat": 21.8057174, "lon": -102.2946894 }
+    "coordinates": {
+      "lat": 21.8064756,
+      "lon": -102.2951005
+    }
   }
 ]
