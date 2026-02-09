@@ -1,80 +1,37 @@
-import edgeData from "../data/edges.json";
-import vertexData from "../data/vertices.json";
-import type { Edge } from "../src/types/edge";
-import type { Vertex } from "../src/types/vertex";
+import { MapData } from '@/store/useMapStore'
+import { Edge } from '@/types/edge'
+import { Vertex } from '@/types/vertex'
 
-const createIncidenceMatrix = (edges: Edge[], vertices: Vertex[]) => {
-  const incidenceMatrix: number[][] = Array.from(
-    { length: vertices.length },
-    () => Array(edges.length).fill(0),
-  );
+export const createIncidenceMatrix = ({ edges, vertices }: MapData) => {
+	if (!edges || !vertices) return []
 
-  edges.forEach(({ from, to }, i) => {
-    incidenceMatrix[from.id]![i] = 1;
-    incidenceMatrix[to.id]![i] = 1;
-  });
+	const incidenceMatrix: number[][] = Array.from({ length: vertices.length }, () => Array(edges.length).fill(0))
 
-  return incidenceMatrix;
-};
+	edges.forEach(({ from, to }, i) => {
+		incidenceMatrix[from.id]![i] = 1
+		incidenceMatrix[to.id]![i] = 1
+	})
 
-const transformIncidenceMatrixToCSV = (
-  incidenceMatrix: number[][],
-  vertices: Vertex[],
-  edges: Edge[],
-) =>
-  `,${edges.map(({ name }) => name).join(",")}\n` +
-  incidenceMatrix
-    .map(
-      (row, i) =>
-        `${vertices.find(({ id }) => id === i)!.name},${row.join(",")}`,
-    )
-    .join("\n");
+	return incidenceMatrix
+}
 
-const createAdjacencyMatrix = (edges: Edge[], vertices: Vertex[]) => {
-  const adjacencyMatrix: number[][] = Array.from(
-    { length: vertices.length },
-    () => Array(vertices.length).fill(0),
-  );
+export const transformIncidenceMatrixToCSV = (incidenceMatrix: number[][], vertices: Vertex[], edges: Edge[]) =>
+	`,${edges.map(({ name }) => name).join(',')}\n` +
+	incidenceMatrix.map((row, i) => `${vertices.find(({ id }) => id === i)!.name},${row.join(',')}`).join('\n')
 
-  edges.forEach(({ from, to, weight }) => {
-    adjacencyMatrix[from.id]![to.id] = weight;
-    adjacencyMatrix[to.id]![from.id] = weight;
-  });
+export const createAdjacencyMatrix = ({ edges, vertices }: MapData) => {
+	if (!edges || !vertices) return []
 
-  return adjacencyMatrix;
-};
+	const adjacencyMatrix: number[][] = Array.from({ length: vertices.length }, () => Array(vertices.length).fill(0))
 
-const transformAdjacencyMatrixToCSV = (
-  adjacencyMatrix: number[][],
-  vertices: Vertex[],
-) =>
-  `,${vertices.map(({ name }) => name).join(",")}\n` +
-  adjacencyMatrix
-    .map(
-      (row, i) =>
-        `${vertices.find(({ id }) => id === i)!.name},${row.join(",")}`,
-    )
-    .join("\n");
+	edges.forEach(({ from, to, weight }) => {
+		adjacencyMatrix[from.id]![to.id] = weight
+		adjacencyMatrix[to.id]![from.id] = weight
+	})
 
-const run = async () => {
-  const edges: Edge[] = edgeData;
-  const vertices: Vertex[] = vertexData;
+	return adjacencyMatrix
+}
 
-  const incidenceMatrix = createIncidenceMatrix(edges, vertices);
-  const incidenceMatrixCSV = transformIncidenceMatrixToCSV(
-    incidenceMatrix,
-    vertices,
-    edges,
-  );
-
-  const adjacencyMatrix = createAdjacencyMatrix(edges, vertices);
-  const adjacencyMatrixCSV = transformAdjacencyMatrixToCSV(
-    adjacencyMatrix,
-    vertices,
-  );
-
-  await Bun.write("./data/incidenceMatrix.csv", incidenceMatrixCSV);
-  await Bun.write("./data/adjacencyMatrix.csv", adjacencyMatrixCSV);
-};
-
-void run();
+export const transformAdjacencyMatrixToCSV = (adjacencyMatrix: number[][], vertices: Vertex[]) =>
+	`,${vertices.map(({ name }) => name).join(',')}\n` +
+	adjacencyMatrix.map((row, i) => `${vertices.find(({ id }) => id === i)!.name},${row.join(',')}`).join('\n')

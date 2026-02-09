@@ -6,6 +6,7 @@ import { Map } from '@/components/Map'
 import { DataPanel } from '@/components/DataPanel'
 import { AnimationPanel } from '@/components/AnimationPanel'
 import { MapOptionsPanel } from '@/components/MapOptionsPanel'
+import { Description } from '@/components/Description'
 
 export default function Page() {
 	const [visitedSteps, setVisitedSteps] = useState<
@@ -28,7 +29,7 @@ export default function Page() {
 	)
 
 	return (
-		<div className="container mx-auto max-w-5xl space-y-6 px-4 py-6">
+		<div className="container max-w-5xl mx-auto space-y-6 px-4 py-6">
 			<header className="space-y-2 text-center">
 				<h1 className="text-2xl font-semibold tracking-tight">Visualizador de Rutas con A*</h1>
 			</header>
@@ -60,6 +61,9 @@ export default function Page() {
 				</div>
 				<MapOptionsPanel />
 				<AnimationPanel />
+			</section>
+			<section>
+				<Description />
 			</section>
 		</div>
 	)
