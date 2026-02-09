@@ -3,8 +3,14 @@ export type WeightedNeighbor = {
 	weight: number
 }
 
-export const dijkstra = (startId: number, adjacency: Map<number, WeightedNeighbor[]>) => {
+export type DijkstraResult = {
+	distances: Map<number, number>
+	previous: Map<number, number>
+}
+
+export const dijkstra = (startId: number, adjacency: Map<number, WeightedNeighbor[]>): DijkstraResult => {
 	const distances = new Map<number, number>()
+	const previous = new Map<number, number>()
 	const visited = new Set<number>()
 
 	for (const nodeId of adjacency.keys()) {
@@ -12,7 +18,7 @@ export const dijkstra = (startId: number, adjacency: Map<number, WeightedNeighbo
 	}
 	if (!distances.has(startId)) {
 		distances.set(startId, Number.POSITIVE_INFINITY)
-		return distances
+		return { distances, previous }
 	}
 
 	distances.set(startId, 0)
@@ -33,9 +39,10 @@ export const dijkstra = (startId: number, adjacency: Map<number, WeightedNeighbo
 			const nextDistance = best + neighbor.weight
 			if (nextDistance < (distances.get(neighbor.to) ?? Number.POSITIVE_INFINITY)) {
 				distances.set(neighbor.to, nextDistance)
+				previous.set(neighbor.to, current)
 			}
 		}
 	}
 
-	return distances
+	return { distances, previous }
 }
