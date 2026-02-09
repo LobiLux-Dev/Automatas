@@ -6,47 +6,81 @@ import { IncidenceMatrix } from './IncidenceMatrix'
 
 export const Description = () => {
 	const mapData = useMapStore(state => state.mapData)
+	const vertices = mapData.vertices ?? []
+	const edges = mapData.edges ?? []
 
 	return (
 		<div className="grid gap-6 grid-cols-1">
-			<section className="rounded-2xl border bg-card p-5 shadow-sm">
-				<header className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+			<section className="rounded-3xl border bg-gradient-to-br from-muted/30 via-card to-muted/10 p-6 shadow-sm">
+				<header className="flex flex-col gap-2 lg:flex-row lg:items-end lg:justify-between">
 					<div>
-						<p className="text-xs uppercase tracking-widest text-muted-foreground">Resumen del grafo</p>
-						<h2 className="text-2xl font-semibold">Descripción formal de UPA</h2>
+						<p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Mapa UPA</p>
+						<h2 className="text-3xl font-semibold">Lectura formal del grafo</h2>
+						<p className="mt-2 max-w-xl text-sm text-muted-foreground">
+							Organizamos el mapa como un grafo dirigido donde cada arista conecta dos vertices.
+						</p>
 					</div>
-					<p className="text-sm text-muted-foreground">Relaciones, vértices y aristas en notación de conjuntos.</p>
+					<div className="grid w-full grid-cols-2 gap-3 sm:max-w-[260px]">
+						<div className="rounded-2xl border bg-background/80 p-3 text-center">
+							<p className="text-xs uppercase tracking-widest text-muted-foreground">Vertices</p>
+							<p className="text-2xl font-semibold">{vertices.length}</p>
+						</div>
+						<div className="rounded-2xl border bg-background/80 p-3 text-center">
+							<p className="text-xs uppercase tracking-widest text-muted-foreground">Aristas</p>
+							<p className="text-2xl font-semibold">{edges.length}</p>
+						</div>
+					</div>
 				</header>
-				<div className="mt-5 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-					<pre className="rounded-2xl border bg-muted/30 p-4 text-sm leading-6 whitespace-pre-wrap">
-						{mapData.edges?.map(({ from, to, name }) => (
-							<>
-								<strong>{name}</strong> = {'{'} {from.name}, {to.name} {'}'}
-								<br />
-							</>
-						))}
-					</pre>
-					<div className="grid gap-4">
-						<pre className="rounded-2xl border bg-muted/30 p-4 text-sm leading-6 whitespace-pre-wrap">
-							<strong>UPA(V)</strong> = {'{'} {mapData.vertices?.map(({ name }) => name).join(', ')} {'}'}
-						</pre>
-						<pre className="rounded-2xl border bg-muted/30 p-4 text-sm leading-6 whitespace-pre-wrap">
-							<strong>UPA(E)</strong> = {'{'} {mapData.edges?.map(({ name }) => name).join(', ')} {'}'}
-						</pre>
-						<pre className="rounded-2xl border bg-muted/30 p-4 text-sm leading-6 whitespace-pre-wrap">
-							<h3 className="text-lg font-semibold text-center">Vertices y etiquetas</h3>
-							<br />
-							{mapData.vertices?.map(({ name, label }) => (
-								<>
-									<strong>{name}</strong> ({label})
-									<br />
-								</>
+				<div className="mt-6 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+					<section className="rounded-2xl border bg-background/70 p-4">
+						<h3 className="text-sm uppercase tracking-widest text-muted-foreground">Relaciones</h3>
+						<p className="mt-1 text-sm text-muted-foreground">Cada arista se expresa como un par ordenado.</p>
+						<div className="mt-4 space-y-2 text-sm font-mono">
+							{edges.map(({ from, to, name, id }) => (
+								<div key={id}>
+									<strong>{name}</strong> = {'{'} {from.name}, {to.name} {'}'}
+								</div>
 							))}
-						</pre>
+						</div>
+					</section>
+					<div className="grid gap-4">
+						<section className="rounded-2xl border bg-background/70 p-4">
+							<h3 className="text-sm uppercase tracking-widest text-muted-foreground">Conjunto de vertices</h3>
+							<p className="mt-2 text-sm font-mono">
+								<strong>UPA(V)</strong> = {'{'} {vertices.map(({ name }) => name).join(', ')} {'}'}
+							</p>
+						</section>
+						<section className="rounded-2xl border bg-background/70 p-4">
+							<h3 className="text-sm uppercase tracking-widest text-muted-foreground">Conjunto de aristas</h3>
+							<p className="mt-2 text-sm font-mono">
+								<strong>UPA(E)</strong> = {'{'} {edges.map(({ name }) => name).join(', ')} {'}'}
+							</p>
+						</section>
+						<section className="rounded-2xl border bg-background/70 p-4">
+							<h3 className="text-sm uppercase tracking-widest text-muted-foreground">Vertices y etiquetas</h3>
+							<div className="mt-3 space-y-2 text-sm">
+								{vertices.map(({ name, label, id }) => (
+									<div key={id}>
+										<strong>{name}</strong> ({label})
+									</div>
+								))}
+							</div>
+						</section>
+						<section className="rounded-2xl border bg-background/70 p-4">
+							<h3 className="text-sm uppercase tracking-widest text-muted-foreground">Grados por vertice</h3>
+							<div className="mt-3 space-y-2 text-sm font-mono">
+								{vertices.map(({ id, name }) => (
+									<div key={id}>
+										<strong>grd({name})</strong> ={' '}
+										{edges.filter(edge => edge.from.id === id || edge.to.id === id).length}
+									</div>
+								))}
+							</div>
+						</section>
 					</div>
 				</div>
-				<p className="mt-4 text-xs text-muted-foreground">
-					La notacion UPA(V) y UPA(E) resume el conjunto de vertices y aristas del mapa.
+				<p className="mt-5 text-xs text-muted-foreground">
+					UPA(V) y UPA(E) resumen los conjuntos fundamentales, mientras que las relaciones definen el trazado.
 				</p>
 			</section>
 			<AdjacencyMatrix />

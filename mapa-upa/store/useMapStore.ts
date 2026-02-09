@@ -48,6 +48,8 @@ export const useMapStore = create<MapState>(set => ({
 
 		const geoJson = kml(xmlDoc) as GeoJSON
 
+		console.log('GeoJSON cargado:', parseGeoJsonToJson(geoJson))
+
 		set({ mapData: parseGeoJsonToJson(geoJson) })
 	},
 }))

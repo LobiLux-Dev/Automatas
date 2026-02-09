@@ -1,14 +1,14 @@
-import type { Coordinates } from "./coordinates";
-import type { Vertex } from "./vertex";
+import type { Coordinates } from './coordinates'
+import type { Vertex } from './vertex'
 
 export type BaseEdge = {
-  id: number;
-  name: string;
-  weight: number;
-  coordinates: Coordinates[];
-};
+	id: number
+	name: string
+	weight: number
+	coordinates: Coordinates[]
+}
 
 export type Edge = BaseEdge & {
-  from: Vertex;
-  to: Vertex;
-};
+	from: Vertex
+	to: Vertex
+}

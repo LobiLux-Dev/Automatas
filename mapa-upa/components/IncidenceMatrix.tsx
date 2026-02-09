@@ -10,7 +10,7 @@ export const IncidenceMatrix = () => {
 
 	return (
 		<div className="rounded-2xl border bg-card p-4 shadow-sm">
-			<h2 className="text-xl text-center font-medium text-muted-foreground">Matriz de Adyacencia</h2>
+			<h2 className="text-xl text-center font-medium text-muted-foreground">Matriz de Incidencia</h2>
 			<Table className="mt-3">
 				<TableHeader>
 					<TableRow>

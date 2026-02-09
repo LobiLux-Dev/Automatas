@@ -1,8 +1,8 @@
-import type { Coordinates } from "./coordinates";
+import type { Coordinates } from './coordinates'
 
 export type Vertex = {
-  id: number;
-  name: string;
-  label: string;
-  coordinates: Coordinates;
-};
+	id: number
+	name: string
+	label: string
+	coordinates: Coordinates
+}
