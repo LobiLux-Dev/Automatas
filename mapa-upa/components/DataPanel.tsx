@@ -37,7 +37,7 @@ export const DataPanel = () => {
 							value={startValue}
 							onValueChange={value => onStartChange(Number.isNaN(Number(value)) ? null : Number(value))}
 						>
-							<SelectTrigger className="w-full">
+							<SelectTrigger className="w-full max-w-80">
 								<SelectValue placeholder="Selecciona un origen" />
 							</SelectTrigger>
 							<SelectContent>
@@ -60,7 +60,7 @@ export const DataPanel = () => {
 							value={goalValue}
 							onValueChange={value => onGoalChange(Number.isNaN(Number(value)) ? null : Number(value))}
 						>
-							<SelectTrigger className="w-full">
+							<SelectTrigger className="w-full max-w-80">
 								<SelectValue placeholder="Selecciona un destino" />
 							</SelectTrigger>
 							<SelectContent>

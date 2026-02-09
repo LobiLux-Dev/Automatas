@@ -1,3 +1,5 @@
+'use client'
+
 import { useMapStore } from '@/store/useMapStore'
 import { Field, FieldDescription, FieldLabel } from './ui/field'
 import { Input } from './ui/input'

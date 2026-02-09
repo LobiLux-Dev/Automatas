@@ -6,22 +6,15 @@ import dynamic from 'next/dynamic'
 import 'leaflet/dist/leaflet.css'
 
 import { aStar, reconstructPath, type Neighbor } from '@/scripts/aStar'
-import type { Vertex } from '@/types/vertex'
 import { useMapStore } from '@/store/useMapStore'
 import { useAnimationStore } from '@/store/useAnimationStore'
+import type { Vertex } from '@/types/vertex'
 
 const MapContainer = dynamic(async () => (await import('react-leaflet')).MapContainer, { ssr: false })
 const TileLayer = dynamic(async () => (await import('react-leaflet')).TileLayer, { ssr: false })
 const CircleMarker = dynamic(async () => (await import('react-leaflet')).CircleMarker, { ssr: false })
 const Polyline = dynamic(async () => (await import('react-leaflet')).Polyline, { ssr: false })
 const Tooltip = dynamic(async () => (await import('react-leaflet')).Tooltip, { ssr: false })
-
-interface Props {
-	onProgressChange?: (data: {
-		steps: Array<{ id: number; label: string; edgeId: number | null; weight: number }>
-		total: number
-	}) => void
-}
 
 const earthsRadius = 6371000
 
@@ -36,11 +29,12 @@ const haversine = (lat1: number, lon1: number, lat2: number, lon2: number): numb
 	return 2 * earthsRadius * Math.asin(Math.sqrt(a))
 }
 
-export const Map = ({ onProgressChange }: Props) => {
+export const Map = () => {
 	const mapData = useMapStore(state => state.mapData)
 	const zoomLevel = useMapStore(state => state.zoomLevel)
 	const startId = useMapStore(state => state.startId)
 	const goalId = useMapStore(state => state.goalId)
+	const setAStarResult = useMapStore(state => state.setAStarResult)
 	const onSelectStart = useMapStore(state => state.setStartId)
 	const onSelectGoal = useMapStore(state => state.setGoalId)
 
@@ -99,8 +93,11 @@ export const Map = ({ onProgressChange }: Props) => {
 			return haversine(v.coordinates.lat, v.coordinates.lon, goal.coordinates.lat, goal.coordinates.lon)
 		}
 
-		return aStar(effectiveStartId, effectiveGoalId, graph, heuristic)
-	}, [effectiveStartId, effectiveGoalId, graph, verticesById])
+		const aStarResult = aStar(effectiveStartId, effectiveGoalId, graph, heuristic)
+		setAStarResult(aStarResult)
+
+		return aStarResult
+	}, [effectiveStartId, effectiveGoalId, graph, verticesById, setAStarResult])
 
 	const path = searchResult?.path ?? null
 	const visitedOrder = searchResult?.visitedOrder ?? []
@@ -170,7 +167,6 @@ export const Map = ({ onProgressChange }: Props) => {
 	const lastProgressRef = useRef<{ count: number; total: number; lastId: number | null } | null>(null)
 
 	useEffect(() => {
-		if (!onProgressChange) return
 		const steps = visitedSteps.slice(0, visitedIndex)
 		const total = steps.reduce((sum, step) => sum + step.weight, 0)
 		const lastId = steps.length > 0 ? steps[steps.length - 1].id : null
@@ -185,8 +181,7 @@ export const Map = ({ onProgressChange }: Props) => {
 			return
 		}
 		lastProgressRef.current = nextProgress
-		onProgressChange({ steps, total })
-	}, [visitedSteps, visitedIndex, onProgressChange])
+	}, [visitedSteps, visitedIndex])
 
 	const handleVertexClick = (id: number) => {
 		if (effectiveStartId === null) {

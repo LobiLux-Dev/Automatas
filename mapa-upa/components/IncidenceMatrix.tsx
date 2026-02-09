@@ -1,3 +1,5 @@
+'use client'
+
 import { createIncidenceMatrix } from '@/scripts/makeMatrices'
 import { useMapStore } from '@/store/useMapStore'
 import { Table, TableBody, TableCell, TableHeader, TableRow } from './ui/table'
@@ -5,8 +7,6 @@ import { Table, TableBody, TableCell, TableHeader, TableRow } from './ui/table'
 export const IncidenceMatrix = () => {
 	const mapData = useMapStore(state => state.mapData)
 	const tableData = createIncidenceMatrix(mapData)
-
-	console.log('IncidenceMatrix render', { mapData, tableData })
 
 	return (
 		<div className="rounded-2xl border bg-card p-4 shadow-sm">

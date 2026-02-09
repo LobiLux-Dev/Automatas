@@ -1,3 +1,5 @@
+'use client'
+
 import { createAdjacencyMatrix } from '@/scripts/makeMatrices'
 import { useMapStore } from '@/store/useMapStore'
 import { Table, TableBody, TableCell, TableHeader, TableRow } from './ui/table'
