@@ -2,49 +2,34 @@
 
 import { useMemo } from 'react'
 import { useMapStore } from '@/store/useMapStore'
+import { dijkstra, type WeightedNeighbor } from '@/scripts/dijkstra'
 import { AdjacencyMatrix } from './AdjacencyMatrix'
 import { IncidenceMatrix } from './IncidenceMatrix'
 
 const computeDiameter = (
 	vertices: Array<{ id: number }>,
-	edges: Array<{ from: { id: number }; to: { id: number } }>,
+	edges: Array<{ from: { id: number }; to: { id: number }; weight: number }>,
 ) => {
 	if (vertices.length === 0) {
 		return 0
 	}
 
-	const adjacency = new Map<number, number[]>()
+	const adjacency = new Map<number, WeightedNeighbor[]>()
 	vertices.forEach(vertex => adjacency.set(vertex.id, []))
 	for (const edge of edges) {
 		const fromId = edge.from.id
 		const toId = edge.to.id
-		adjacency.get(fromId)?.push(toId)
-		adjacency.get(toId)?.push(fromId)
+		adjacency.get(fromId)?.push({ to: toId, weight: edge.weight })
+		adjacency.get(toId)?.push({ to: fromId, weight: edge.weight })
 	}
 
 	let diameter = 0
 	for (const vertex of vertices) {
-		const distances = new Map<number, number>([[vertex.id, 0]])
-		const queue = [vertex.id]
-		for (let index = 0; index < queue.length; index += 1) {
-			const current = queue[index]
-			const currentDistance = distances.get(current) ?? 0
-			for (const neighbor of adjacency.get(current) ?? []) {
-				if (!distances.has(neighbor)) {
-					distances.set(neighbor, currentDistance + 1)
-					queue.push(neighbor)
-				}
-			}
-		}
-
-		if (distances.size !== vertices.length) {
-			return null
-		}
+		const distances = dijkstra(vertex.id, adjacency)
 
 		for (const value of distances.values()) {
-			if (value > diameter) {
-				diameter = value
-			}
+			if (value === Number.POSITIVE_INFINITY) return null
+			if (value > diameter) diameter = value
 		}
 	}
 
