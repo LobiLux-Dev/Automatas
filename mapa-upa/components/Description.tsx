@@ -1,17 +1,65 @@
 'use client'
 
+import { useMemo } from 'react'
 import { useMapStore } from '@/store/useMapStore'
 import { AdjacencyMatrix } from './AdjacencyMatrix'
 import { IncidenceMatrix } from './IncidenceMatrix'
 
+const computeDiameter = (
+	vertices: Array<{ id: number }>,
+	edges: Array<{ from: { id: number }; to: { id: number } }>,
+) => {
+	if (vertices.length === 0) {
+		return 0
+	}
+
+	const adjacency = new Map<number, number[]>()
+	vertices.forEach(vertex => adjacency.set(vertex.id, []))
+	for (const edge of edges) {
+		const fromId = edge.from.id
+		const toId = edge.to.id
+		adjacency.get(fromId)?.push(toId)
+		adjacency.get(toId)?.push(fromId)
+	}
+
+	let diameter = 0
+	for (const vertex of vertices) {
+		const distances = new Map<number, number>([[vertex.id, 0]])
+		const queue = [vertex.id]
+		for (let index = 0; index < queue.length; index += 1) {
+			const current = queue[index]
+			const currentDistance = distances.get(current) ?? 0
+			for (const neighbor of adjacency.get(current) ?? []) {
+				if (!distances.has(neighbor)) {
+					distances.set(neighbor, currentDistance + 1)
+					queue.push(neighbor)
+				}
+			}
+		}
+
+		if (distances.size !== vertices.length) {
+			return null
+		}
+
+		for (const value of distances.values()) {
+			if (value > diameter) {
+				diameter = value
+			}
+		}
+	}
+
+	return diameter
+}
+
 export const Description = () => {
 	const mapData = useMapStore(state => state.mapData)
-	const vertices = mapData.vertices ?? []
-	const edges = mapData.edges ?? []
+	const vertices = useMemo(() => mapData.vertices ?? [], [mapData.vertices])
+	const edges = useMemo(() => mapData.edges ?? [], [mapData.edges])
+	const diameter = useMemo(() => computeDiameter(vertices, edges), [vertices, edges])
 
 	return (
 		<div className="grid gap-6 grid-cols-1">
-			<section className="rounded-3xl border bg-gradient-to-br from-muted/30 via-card to-muted/10 p-6 shadow-sm">
+			<section className="rounded-3xl border bg-linear-to-br from-muted/30 via-card to-muted/10 p-6 shadow-sm">
 				<header className="flex flex-col gap-2 lg:flex-row lg:items-end lg:justify-between">
 					<div>
 						<p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Mapa UPA</p>
@@ -20,7 +68,7 @@ export const Description = () => {
 							Organizamos el mapa como un grafo dirigido donde cada arista conecta dos vertices.
 						</p>
 					</div>
-					<div className="grid w-full grid-cols-2 gap-3 sm:max-w-[260px]">
+					<div className="grid w-full grid-cols-2 gap-3 sm:max-w-65 md:grid-cols-3">
 						<div className="rounded-2xl border bg-background/80 p-3 text-center">
 							<p className="text-xs uppercase tracking-widest text-muted-foreground">Vertices</p>
 							<p className="text-2xl font-semibold">{vertices.length}</p>
@@ -28,6 +76,10 @@ export const Description = () => {
 						<div className="rounded-2xl border bg-background/80 p-3 text-center">
 							<p className="text-xs uppercase tracking-widest text-muted-foreground">Aristas</p>
 							<p className="text-2xl font-semibold">{edges.length}</p>
+						</div>
+						<div className="rounded-2xl border bg-background/80 p-3 text-center">
+							<p className="text-xs uppercase tracking-widest text-muted-foreground">Diametro</p>
+							<p className="text-2xl font-semibold">{diameter === null ? 'No conexo' : diameter}</p>
 						</div>
 					</div>
 				</header>

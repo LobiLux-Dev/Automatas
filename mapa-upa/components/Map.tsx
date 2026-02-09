@@ -100,12 +100,12 @@ export const Map = () => {
 	}, [effectiveStartId, effectiveGoalId, graph, verticesById, setAStarResult])
 
 	const path = searchResult?.path ?? null
-	const visitedOrder = searchResult?.visitedOrder ?? []
+	const visitedOrder = useMemo(() => searchResult?.visitedOrder ?? [], [searchResult?.visitedOrder])
 	const cameFrom = searchResult?.cameFrom ?? null
 
 	useEffect(() => {
-		setVisitedIndex(0)
-		if (!visitedOrder.length) return
+		const resetTimeout = setTimeout(() => setVisitedIndex(0), 0)
+		if (!visitedOrder.length) return () => clearTimeout(resetTimeout)
 		const interval = setInterval(() => {
 			setVisitedIndex(current => {
 				const next = current + 1
@@ -116,7 +116,10 @@ export const Map = () => {
 				return next
 			})
 		}, animationDelaySec * 1000)
-		return () => clearInterval(interval)
+		return () => {
+			clearTimeout(resetTimeout)
+			clearInterval(interval)
+		}
 	}, [effectiveStartId, effectiveGoalId, visitedOrder, animationDelaySec, animationToken])
 
 	const pathVertexSet = useMemo(() => new Set(path?.vertexPath ?? []), [path])
@@ -203,7 +206,7 @@ export const Map = () => {
 			key={mapKey}
 			center={{ lat: 21.806299, lng: -102.296295 }}
 			zoom={zoomLevel}
-			className="h-[28rem] w-full max-w-4xl mx-auto rounded-xl border bg-card shadow-sm print-full print-map z-0"
+			className="h-112 w-full max-w-4xl mx-auto rounded-xl border bg-card shadow-sm print-full print-map z-0"
 		>
 			<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 			{mapData.edges?.map(({ id, coordinates, name }) => (
